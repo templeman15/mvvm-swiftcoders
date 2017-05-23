@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oPR-US-TSA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Car Detail View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CarDetailVC" id="BYZ-38-t0r" customClass="CarDetailViewController" customModule="MVVM_SwiftCoders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="k1C-hN-DGO">
+                                <rect key="frame" x="30" y="94" width="260" height="120.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXa-Mu-DKn">
+                                        <rect key="frame" x="91.5" y="0.0" width="77" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0is-f8-h5B">
+                                        <rect key="frame" x="101" y="56" width="58" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel Remaining" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaZ-gK-CFL">
+                                        <rect key="frame" x="72" y="100" width="116.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wbm-Sk-j1X">
+                                <rect key="frame" x="125.5" y="307.5" width="69" height="30"/>
+                                <state key="normal" title="Test Drive"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k1C-hN-DGO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="A8G-qx-EYB"/>
+                            <constraint firstItem="Wbm-Sk-j1X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ga5-yt-Nvy"/>
+                            <constraint firstItem="Wbm-Sk-j1X" firstAttribute="top" secondItem="k1C-hN-DGO" secondAttribute="bottom" constant="93" id="LDD-UW-gvz"/>
+                            <constraint firstAttribute="trailing" secondItem="k1C-hN-DGO" secondAttribute="trailing" constant="30" id="aOL-lO-Q3o"/>
+                            <constraint firstItem="k1C-hN-DGO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="zpW-bt-13E"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="o0v-1x-qJc"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="667"/>
+                    <connections>
+                        <outlet property="fuelRemainingLabel" destination="RaZ-gK-CFL" id="hVw-Kf-e02"/>
+                        <outlet property="makeLabel" destination="SXa-Mu-DKn" id="uC6-CI-PfM"/>
+                        <outlet property="modelLabel" destination="0is-f8-h5B" id="sb1-7v-631"/>
+                        <outlet property="testDriveButton" destination="Wbm-Sk-j1X" id="aov-de-Yf7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="418" y="789"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="QUB-n9-eNG">
+            <objects>
+                <navigationController storyboardIdentifier="CarsVC" automaticallyAdjustsScrollViewInsets="NO" id="oPR-US-TSA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="667"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bFB-X7-WiQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.23582639729999999" green="0.31049829499999998" blue="0.38908774000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zdP-z8-BrM" kind="relationship" relationship="rootViewController" id="ch7-Hg-TZ7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MdA-hb-3RJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114" y="790"/>
+        </scene>
+        <!--Dealership Inventory-->
+        <scene sceneID="8Qb-Bu-VBD">
+            <objects>
+                <viewController id="zdP-z8-BrM" customClass="CarsViewController" customModule="MVVM_SwiftCoders" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sPI-Rr-FdD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jm4-u6-mAp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qQW-KI-LQc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="wpS-q3-1Fd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bft-Gp-pUX">
+                                <rect key="frame" x="0.0" y="108" width="320" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CarTableViewCell" rowHeight="74" id="7uF-Rg-MGb" customClass="CarsTableViewCell" customModule="MVVM_SwiftCoders" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7uF-Rg-MGb" id="3NS-TY-lQ8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="73.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="B9o-C9-gqI">
+                                                    <rect key="frame" x="30" y="10" width="260" height="53.5"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7Mz-BL-Gpa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="43" height="43.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c8-qo-gEY">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3s-bm-ZKd">
+                                                                    <rect key="frame" x="0.0" y="25.5" width="43" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fuel" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-0f-BMz">
+                                                            <rect key="frame" x="43" y="0.0" width="217" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="B9o-C9-gqI" secondAttribute="bottom" constant="10" id="CH2-1c-75e"/>
+                                                <constraint firstAttribute="trailing" secondItem="B9o-C9-gqI" secondAttribute="trailing" constant="30" id="SGV-lq-BIE"/>
+                                                <constraint firstItem="B9o-C9-gqI" firstAttribute="leading" secondItem="3NS-TY-lQ8" secondAttribute="leading" constant="30" id="eZU-pc-rj8"/>
+                                                <constraint firstItem="B9o-C9-gqI" firstAttribute="top" secondItem="3NS-TY-lQ8" secondAttribute="top" constant="10" id="uqs-ub-5is"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="fuelLabel" destination="bWN-0f-BMz" id="AMj-ao-hjY"/>
+                                            <outlet property="makeLabel" destination="3c8-qo-gEY" id="O2k-DB-GbX"/>
+                                            <outlet property="modelLabel" destination="I3s-bm-ZKd" id="yim-fM-7kD"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wpS-q3-1Fd" secondAttribute="trailing" id="42b-tm-fGM"/>
+                            <constraint firstItem="Jm4-u6-mAp" firstAttribute="top" secondItem="bft-Gp-pUX" secondAttribute="bottom" id="8iI-oI-AjW"/>
+                            <constraint firstItem="wpS-q3-1Fd" firstAttribute="top" secondItem="sPI-Rr-FdD" secondAttribute="bottom" id="Dc1-Sw-eT5"/>
+                            <constraint firstAttribute="trailing" secondItem="bft-Gp-pUX" secondAttribute="trailing" id="TeB-Pt-spY"/>
+                            <constraint firstItem="bft-Gp-pUX" firstAttribute="leading" secondItem="qQW-KI-LQc" secondAttribute="leading" id="ZtB-fI-D4i"/>
+                            <constraint firstItem="wpS-q3-1Fd" firstAttribute="leading" secondItem="qQW-KI-LQc" secondAttribute="leading" id="jgN-DL-Gnc"/>
+                            <constraint firstItem="bft-Gp-pUX" firstAttribute="top" secondItem="wpS-q3-1Fd" secondAttribute="bottom" id="zaY-sG-leb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dealership Inventory" id="ZQl-Vf-fHa">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Q3Y-RA-0jW"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="wpS-q3-1Fd" id="DaI-Pw-Cc7"/>
+                        <outlet property="tableView" destination="bft-Gp-pUX" id="zIb-gh-COu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7e-GG-UJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-413" y="790"/>
+        </scene>
+    </scenes>
+</document>
